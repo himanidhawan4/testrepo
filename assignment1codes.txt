@@ -1,0 +1,591 @@
+/////////////task1 for users 
+db.Users.insertMany([
+  { "userId": "U1001", "name": "Manya Sharma", "email": "manya@gmail.com", "phone": "9876543210", "role": "attendee", "createdAt": new Date("2026-01-19T10:00:00Z") },
+  { "userId": "U1002", "name": "Arjun Mehta", "email": "arjun@events.in", "phone": "9821012345", "role": "organizer", "createdAt": new Date("2026-01-18T11:30:00Z") },
+  { "userId": "U1003", "name": "Priya Patel", "email": "priya@gmail.com", "phone": "9988776655", "role": "attendee", "createdAt": new Date("2026-01-17T09:15:00Z") },
+  { "userId": "U1004", "name": "Ishaan Iyer", "email": "ishaan@techfest.in", "phone": "9123456789", "role": "organizer", "createdAt": new Date("2026-01-16T14:20:00Z") },
+  { "userId": "U1005", "name": "Ananya Reddy", "email": "ananya@mail.in", "phone": "9555666777", "role": "attendee", "createdAt": new Date("2026-01-15T16:45:00Z") },
+  { "userId": "U1006", "name": "Vikram Singh", "email": "vikram@shows.in", "phone": "9000111222", "role": "organizer", "createdAt": new Date("2026-01-14T08:00:00Z") },
+  { "userId": "U1007", "name": "Sanya Malhotra", "email": "sanya@gmail.com", "phone": "9888777666", "role": "attendee", "createdAt": new Date("2026-01-13T12:10:00Z") },
+  { "userId": "U1008", "name": "Rohan Gupta", "email": "rohan@web.in", "phone": "9777888999", "role": "attendee", "createdAt": new Date("2026-01-12T10:30:00Z") },
+  { "userId": "U1009", "name": "Kavya Nair", "email": "kavya@concerts.com", "phone": "9666555444", "role": "organizer", "createdAt": new Date("2026-01-11T17:00:00Z") },
+  { "userId": "U1010", "name": "Aditya Verma", "email": "aditya@gmail.com", "phone": "9555444333", "role": "attendee", "createdAt": new Date("2026-01-10T11:00:00Z") },
+  { "userId": "U1011", "name": "Meera Joshi", "email": "meera@arts.in", "phone": "9444333222", "role": "organizer", "createdAt": new Date("2026-01-09T13:45:00Z") },
+  { "userId": "U1012", "name": "Siddharth Rao", "email": "sid@gmail.com", "phone": "9333222111", "role": "attendee", "createdAt": new Date("2026-01-08T09:00:00Z") },
+  { "userId": "U1013", "name": "Zoya Khan", "email": "zoya@fashion.in", "phone": "9222111000", "role": "organizer", "createdAt": new Date("2026-01-07T15:20:00Z") },
+  { "userId": "U1014", "name": "Rahul Bose", "email": "rahul@gmail.com", "phone": "9111222333", "role": "attendee", "createdAt": new Date("2026-01-06T10:15:00Z") },
+  { "userId": "U1015", "name": "Deepika Padukone", "email": "deepika@cinema.in", "phone": "9000900090", "role": "attendee", "createdAt": new Date("2026-01-05T14:50:00Z") },
+  { "userId": "U1016", "name": "Virat Kohli", "email": "virat@sports.in", "phone": "9888988898", "role": "organizer", "createdAt": new Date("2026-01-04T11:10:00Z") },
+  { "userId": "U1017", "name": "Sara Ali", "email": "sara@gmail.com", "phone": "9777977797", "role": "attendee", "createdAt": new Date("2026-01-03T08:40:00Z") },
+  { "userId": "U1018", "name": "Kartik Aaryan", "email": "kartik@mail.in", "phone": "9666966696", "role": "attendee", "createdAt": new Date("2026-01-02T16:00:00Z") },
+  { "userId": "U1019", "name": "Priyanka Chopra", "email": "priyanka@global.com", "phone": "9555955595", "role": "organizer", "createdAt": new Date("2026-01-01T10:00:00Z") },
+  { "userId": "U1020", "name": "Ranveer Singh", "email": "ranveer@energy.in", "phone": "9444944494", "role": "organizer", "createdAt": new Date("2026-01-01T12:00:00Z") }
+])
+////////task 2 for event collection
+db.Events.insertOne([{ "eventId":"2001", "title":"techical love", "description":"A gathering for tech enthusiasts",
+"category":"technical"," dateTime":new Date("2026-02-10T10:00:00Z"),"venue": "Hauz Khas", "organizerId":"U1001",
+"price":7009, "totalTickets":111, "availableTickets":100, "status":"upcoming"}])
+
+db.Events.insertMany([{
+  {"eventId":"2003",
+ "title":" Lollapalooza India 2026",
+ "description":"Two-day premier international music festival with multi-genre performances.",
+"category":" Concert/Festival",
+" dateTime":new Date("2026-01-24T16:00:00Z"),
+"venue": " Mahalaxmi Race Course, Mumbai",
+"organizerId":"U1004",
+"price":1500, 
+"totalTickets":10000, 
+"availableTickets":3300,
+"status":"upcoming"
+},
+{
+"eventId":"2003",
+"title":"Linkin Park: From Zero World Tour",
+ "description":"High-impact stadium rock concert",
+"category":"concert",
+" dateTime":new Date("2026-01-18T10:00:00Z"),
+"Venue":"Brigade Innovation Gardens, Bengaluru",
+"organizerId":"U1002",
+"price":10000, 
+"totalTickets":1000,
+ "availableTickets":330, 
+"status":"upcoming"
+},
+{
+    "eventId": "E2004", 
+    "title": "Surajkund International Crafts Mela 2026", 
+    "description": "Massive exhibition showcasing traditional Indian crafts, with Egypt as partner nation.", 
+    "category": "Cultural Fair", 
+    "dateTime": new Date("2026-01-31T10:00:00Z"), 
+    "venue": "Surajkund, Faridabad, Haryana", 
+    "organizerId": "U1011", 
+    "price": 120, 
+    "totalTickets": 5000, 
+    "availableTickets": 4800, 
+    "status": "upcoming" 
+  },
+  { 
+    "eventId": "E2005", 
+    "title": "ICC Men's T20 World Cup 2026", 
+    "description": "International cricket tournament featuring 20 teams.", 
+    "category": "Sports", 
+    "dateTime": new Date("2026-02-07T14:00:00Z"), 
+    "venue": "Various (Final in Ahmedabad)", 
+    "organizerId": "U1016", 
+    "price": 2500, 
+    "totalTickets": 100000, 
+    "availableTickets": 95000, 
+    "status": "upcoming" 
+  },
+  { 
+    "eventId": "E2006", 
+    "title": "India Art Fair 2026", 
+    "description": "Leading platform for modern and contemporary art from South Asia.", 
+    "category": "Exhibition", 
+    "dateTime": new Date("2026-02-05T11:00:00Z"), 
+    "venue": "NSIC Exhibition Grounds, Okhla, New Delhi", 
+    "organizerId": "U1011", 
+    "price": 600, 
+    "totalTickets": 2000, 
+    "availableTickets": 1800, 
+    "status": "upcoming" 
+  },
+  { 
+    "eventId": "E2007", 
+    "title": "Def Leppard Live in Shillong", 
+    "description": "Large-scale international rock concert in the Northeast.", 
+    "category": "Concert", 
+    "dateTime": new Date("2026-03-25T18:00:00Z"), 
+    "venue": "Jawaharlal Nehru Stadium, Shillong", 
+    "organizerId": "U1019", 
+    "price": 5000, 
+    "totalTickets": 25000, 
+    "availableTickets": 20000, 
+    "status": "upcoming" 
+  },
+  { 
+    "eventId": "E2008", 
+    "title": "IPL 2026 (Indian Premier League)", 
+    "description": "The 19th edition of the annual T20 cricket league.", 
+    "category": "Sports", 
+    "dateTime": new Date("2026-03-26T19:30:00Z"), 
+    "venue": "All India", 
+    "organizerId": "U1016", 
+    "price": 1000, 
+    "totalTickets": 60000, 
+    "availableTickets": 55000, 
+    "status": "upcoming" 
+  },
+  { 
+    "eventId": "E2009", 
+    "title": "Calvin Harris India Tour", 
+    "description": "EDM concert tour featuring top international DJ.", 
+    "category": "Concert", 
+    "dateTime": new Date("2026-04-17T20:00:00Z"), 
+    "venue": "Bengaluru, Mumbai, Delhi NCR", 
+    "organizerId": "U1019", 
+    "price": 8000, 
+    "totalTickets": 15000, 
+    "availableTickets": 4500, 
+    "status": "upcoming" 
+  },
+  { 
+    "eventId": "E2010", 
+    "title": "Kochi Muziris Biennale 2025–2026", 
+    "description": "International contemporary art exhibition.", 
+    "category": "Art Exhibition", 
+    "dateTime": new Date("2025-12-12T10:00:00Z"), 
+    "venue": "Fort Kochi and Mattancherry, Kerala", 
+    "organizerId": "U1011", 
+    "price": 100, 
+    "totalTickets": 10000, 
+    "availableTickets": 5000, 
+    "status": "ongoing" 
+  },
+  { 
+    "eventId": "E2011", 
+    "title": "LLDC Winter Festival 2026", 
+    "description": "10th-anniversary celebration of craft, music, and cultural traditions.", 
+    "category": "Festival", 
+    "dateTime": new Date("2026-01-21T09:00:00Z"), 
+    "venue": "LLDC, Ajrakhpur, Gujarat", 
+    "organizerId": "U1011", 
+    "price": 162, 
+    "totalTickets": 1000, 
+    "availableTickets": 300, 
+    "status": "upcoming" 
+  },
+  { 
+    "eventId": "E2012", 
+    "title": "7th Jaipur Education Summit (JES) 2026", 
+    "description": "Educational expo showcasing schools, universities, and Ed-tech.", 
+    "category": "Education Expo", 
+    "dateTime": new Date("2026-01-19T09:00:00Z"), 
+    "venue": "St. Xavier's School, Nevta, Jaipur", 
+    "organizerId": "U1002", 
+    "price": 0, 
+    "totalTickets": 2000, 
+    "availableTickets": 100, 
+    "status": "upcoming" 
+  },
+  { 
+    "eventId": "E2013", 
+    "title": "Convergence India Expo 2026", 
+    "description": "Technology and infrastructure exhibition.", 
+    "category": "Trade Fair", 
+    "dateTime": new Date("2026-03-23T10:00:00Z"), 
+    "venue": "Bharat Mandapam, New Delhi", 
+    "organizerId": "U1002", 
+    "price": 0, 
+    "totalTickets": 5000, 
+    "availableTickets": 4500, 
+    "status": "upcoming" 
+  },
+  { 
+    "eventId": "E2014", 
+    "title": "Kala Ghoda Arts Festival 2026", 
+    "description": "Multidisciplinary public arts festival.", 
+    "category": "Cultural Festival", 
+    "dateTime": new Date("2026-01-25T16:00:00Z"), 
+    "venue": "Kala Ghoda Precinct, South Mumbai", 
+    "organizerId": "U1011", 
+    "price": 0, 
+    "totalTickets": 20000, 
+    "availableTickets": 20000, 
+    "status": "upcoming" 
+  },
+  { 
+    "eventId": "E2015", 
+    "title": "SulaFest 2026", 
+    "description": "Vineyard music festival featuring diverse genres.", 
+    "category": "Music Festival", 
+    "dateTime": new Date("2026-01-31T12:00:00Z"), 
+    "venue": "Sula Vineyards, Nashik, Maharashtra", 
+    "organizerId": "U1019", 
+    "price": 2800, 
+    "totalTickets": 4000, 
+    "availableTickets": 1500, 
+    "status": "upcoming" 
+  },
+  { 
+    "eventId": "E2016", 
+    "title": "India Jazz Project - Tinariwen", 
+    "description": "Series of concerts featuring Grammy-winning desert blues band.", 
+    "category": "Concert", 
+    "dateTime": new Date("2026-02-06T19:00:00Z"), 
+    "venue": "Delhi NCR, Mumbai, Bengaluru", 
+    "organizerId": "U1004", 
+    "price": 2000, 
+    "totalTickets": 3000, 
+    "availableTickets": 1200, 
+    "status": "upcoming" 
+  },
+  { 
+    "eventId": "E2017", 
+    "title": "IHGF Delhi Fair (Spring 2026)", 
+    "description": "Premier sourcing show for gifts and handicrafts.", 
+    "category": "Trade Fair", 
+    "dateTime": new Date("2026-02-14T10:00:00Z"), 
+    "venue": "India Expo Centre, Greater Noida", 
+    "organizerId": "U1013", 
+    "price": 0, 
+    "totalTickets": 15000, 
+    "availableTickets": 10000, 
+    "status": "upcoming" 
+  },
+  { 
+    "eventId": "E2018", 
+    "title": "Partung Festival 2.0", 
+    "description": "Cultural and music festival showcasing Arunachal Pradesh.", 
+    "category": "Festival", 
+    "dateTime": new Date("2026-01-29T11:00:00Z"), 
+    "venue": "Pasighat, Arunachal Pradesh", 
+    "organizerId": "U1011", 
+    "price": 540, 
+    "totalTickets": 2000, 
+    "availableTickets": 1800, 
+    "status": "upcoming" 
+  },
+  { 
+    "eventId": "E2019", 
+    "title": "2026 India Open Badminton (Super 750)", 
+    "description": "Major international badminton tournament.", 
+    "category": "Sports", 
+    "dateTime": new Date("2026-01-20T09:00:00Z"), 
+    "venue": "New Delhi", 
+    "organizerId": "U1016", 
+    "price": 500, 
+    "totalTickets": 5000, 
+    "availableTickets": 2000, 
+    "status": "upcoming" 
+  },
+  { 
+    "eventId": "E2020", 
+    "title": "India Art Festival - Mumbai", 
+    "description": "Contemporary art fair featuring galleries and artists.", 
+    "category": "Exhibition", 
+    "dateTime": new Date("2026-01-30T10:00:00Z"), 
+    "venue": "Nehru Centre, Worli, Mumbai", 
+    "organizerId": "U1011", 
+    "price": 400, 
+    "totalTickets": 1500, 
+    "availableTickets": 1100, 
+    "status": "upcoming" 
+  }
+])
+//////////////////////task3 for tickets collection
+db.Tickets.insertMany([
+  { "ticketId": "T1001", "eventId": "E2017", "userId": "U1001", "bookingDate": new Date(), "quantity": 2, "totalAmount": 0, "status": "booked" },
+  { "ticketId": "T1002", "eventId": "E2018", "userId": "U1002", "bookingDate": new Date(), "quantity": 1, "totalAmount": 540, "status": "booked" },
+  { "ticketId": "T1003", "eventId": "E2019", "userId": "U1003", "bookingDate": new Date(), "quantity": 3, "totalAmount": 1500, "status": "booked" },
+  { "ticketId": "T1004", "eventId": "E2020", "userId": "U1004", "bookingDate": new Date(), "quantity": 2, "totalAmount": 800, "status": "booked" },
+  { "ticketId": "T1005", "eventId": "E2017", "userId": "U1005", "bookingDate": new Date(), "quantity": 5, "totalAmount": 0, "status": "booked" },
+  { "ticketId": "T1006", "eventId": "E2018", "userId": "U1006", "bookingDate": new Date(), "quantity": 2, "totalAmount": 1080, "status": "booked" },
+  { "ticketId": "T1007", "eventId": "E2019", "userId": "U1007", "bookingDate": new Date(), "quantity": 1, "totalAmount": 500, "status": "booked" },
+  { "ticketId": "T1008", "eventId": "E2020", "userId": "U1008", "bookingDate": new Date(), "quantity": 4, "totalAmount": 1600, "status": "booked" },
+  { "ticketId": "T1009", "eventId": "E2017", "userId": "U1009", "bookingDate": new Date(), "quantity": 1, "totalAmount": 0, "status": "cancelled" },
+  { "ticketId": "T1010", "eventId": "E2018", "userId": "U1010", "bookingDate": new Date(), "quantity": 3, "totalAmount": 1620, "status": "booked" },
+  { "ticketId": "T1011", "eventId": "E2019", "userId": "U1011", "bookingDate": new Date(), "quantity": 2, "totalAmount": 1000, "status": "booked" },
+  { "ticketId": "T1012", "eventId": "E2020", "userId": "U1012", "bookingDate": new Date(), "quantity": 1, "totalAmount": 400, "status": "booked" },
+  { "ticketId": "T1013", "eventId": "E2017", "userId": "U1013", "bookingDate": new Date(), "quantity": 3, "totalAmount": 0, "status": "booked" },
+  { "ticketId": "T1014", "eventId": "E2018", "userId": "U1014", "bookingDate": new Date(), "quantity": 1, "totalAmount": 540, "status": "booked" },
+  { "ticketId": "T1015", "eventId": "E2019", "userId": "U1015", "bookingDate": new Date(), "quantity": 4, "totalAmount": 2000, "status": "booked" },
+  { "ticketId": "T1016", "eventId": "E2020", "userId": "U1016", "bookingDate": new Date(), "quantity": 2, "totalAmount": 800, "status": "booked" },
+  { "ticketId": "T1017", "eventId": "E2018", "userId": "U1017", "bookingDate": new Date(), "quantity": 2, "totalAmount": 1080, "status": "cancelled" },
+  { "ticketId": "T1018", "eventId": "E2019", "userId": "U1018", "bookingDate": new Date(), "quantity": 2, "totalAmount": 1000, "status": "booked" },
+  { "ticketId": "T1019", "eventId": "E2020", "userId": "U1019", "bookingDate": new Date(), "quantity": 3, "totalAmount": 1200, "status": "booked" },
+  { "ticketId": "T1020", "eventId": "E2017", "userId": "U1020", "bookingDate": new Date(), "quantity": 2, "totalAmount": 0, "status": "booked" }
+])
+////////////////task4 categories
+db.Categories.insertMany([
+  { "categoryId": "C101", "name": "Trade Fair", "description": "Business exhibitions and industrial sourcing fairs." },
+  { "categoryId": "C102", "name": "Festival", "description": "Cultural, music, and community celebrations." },
+  { "categoryId": "C103", "name": "Sports", "description": "Competitive matches, tournaments, and athletic events." },
+  { "categoryId": "C104", "name": "Exhibition", "description": "Art, photography, and gallery showcases." },
+  { "categoryId": "C105", "name": "Concert", "description": "Live musical performances and stadium tours." },
+  { "categoryId": "C106", "name": "Workshop", "description": "Educational sessions and hands-on skill training." },
+  { "categoryId": "C107", "name": "Conference", "description": "Professional gatherings for industry leaders and networking." },
+  { "categoryId": "C108", "name": "Comedy", "description": "Stand-up comedy specials and open mic events." },
+  { "categoryId": "C109", "name": "Theatre", "description": "Stage plays, dramas, and musical theatre." },
+  { "categoryId": "C110", "name": "Seminar", "description": "Academic or professional lectures and discussions." },
+  { "categoryId": "C111", "name": "Meetup", "description": "Informal social gatherings for like-minded individuals." },
+  { "categoryId": "C112", "name": "Hackathon", "description": "Competitive coding and innovation marathons." },
+  { "categoryId": "C113", "name": "Webinar", "description": "Online seminars and virtual streaming events." },
+  { "categoryId": "C114", "name": "Charity", "description": "Fundraising events and social cause galas." },
+  { "categoryId": "C115", "name": "Fashion", "description": "Runway shows and clothing brand launches." },
+  { "categoryId": "C116", "name": "Food & Drink", "description": "Culinary festivals, wine tasting, and pop-up kitchens." },
+  { "categoryId": "C117", "name": "Spiritual", "description": "Meditation retreats and religious gatherings." },
+  { "categoryId": "C118", "name": "Literature", "description": "Book launches, poetry slams, and lit-fests." },
+  { "categoryId": "C119", "name": "Gaming", "description": "E-sports tournaments and board game meetups." },
+  { "categoryId": "C120", "name": "Tech Expo", "description": "Showcasing new gadgets, AI, and hardware innovations." }
+])
+///////////////////CRUD USERS
+/insertion
+db.users.insertOne({"userId":"U1021", "name":"yusuf", "email":"yusuf@gmail.com", "phone":67657575657, "role":"attendee"})
+/reading
+db.Users.find({ "role": "attendee" });
+/update
+db.Users.updateOne({ "userId": "U1001" }, { $set: { "email": "manya.updated@mail.com" } });
+/delete
+db.Users.deleteOne({ "userId": "U1021" });
+//////////////////CRUD events
+/insertion
+db.Events.insertOne({ "eventId": "E2021", "title": "Reacting Eng Avinya", "description":"for engineers to enhance their knowledge","category": "Tech experts meet","dateTime": "2026-02-10T10:00:00" ,"venue":"New Delhi Parliament","organizerId":"U1016","price": 0,"totalTickets":555, "availableTickets": 500, "status": "upcoming" })
+/read
+db.Events.find({ "price": { $gt: 450 } });
+/update
+db.Events.updateOne({ "eventId": "E2019" }, { $inc: { "availableTickets": -5 } });
+/delete
+db.Events.deleteOne({ "eventId": "E2021" });
+//////////////////////CRUD TICKETS
+/insertion
+db.Tickets.insertOne( { "ticketId": "T1021", "eventId": "E2017", "userId": "U1020", "bookingDate": new Date(), "quantity": 5, "totalAmount": 0, "status": "booked" })
+/read
+db.Tickets.find({ "userId": "U1001" });
+/update
+db.Tickets.updateOne({ "ticketId": "T1001" }, { $set: { "status": "cancelled" } });
+/delete
+db.Tickets.deleteMany({ "userId": "U1002" });
+////////////////////////////////////////CRUD COLLECTION
+/insertion
+db.Categories.insertOne({ "categoryId": "C121", "name": "Workshop", "description": "Skill-based training sessions." });
+/finding
+db.Categories.findOne({ "name": "Sports" });
+/update
+db.Categories.updateOne({ "name": "Trade Fair" }, { $set: { "description": "Global B2B sourcing and handicraft exhibitions." } });
+/delete
+db.Categories.deleteOne({ "categoryId": "C121" });
+///////////////////////////////aggregation
+
+1.top sale
+db.Tickets.aggregate([
+  { $match: { status: "booked" } },
+  { $group: { 
+      _id: "$eventId", 
+      totalSold: { $sum: "$quantity" } 
+  }},
+  { $sort: { totalSold: -1 } },
+  { $limit: 5 },
+  { $lookup: {
+      from: "Events",
+      localField: "_id",
+      foreignField: "eventId",
+      as: "eventDetails"
+  }},
+  { $project: { _id: 0, eventId: "$_id", totalSold: 1, title: { $arrayElemAt: ["$eventDetails.title", 0] } } }
+])
+2.revenue
+db.Events.aggregate([
+  { $match: { organizerId: "U1011" } }, 
+  { $lookup: {
+      from: "Tickets",
+      localField: "eventId",
+      foreignField: "eventId",
+      as: "bookings"
+  }},
+  { $unwind: "$bookings" },
+  { $match: { "bookings.status": "booked" } },
+  { $group: { 
+      _id: "$organizerId", 
+      totalRevenue: { $sum: "$bookings.totalAmount" } 
+  }}
+])
+3.no. of attendee
+db.Tickets.aggregate([
+  { $match: { status: "booked" } },
+  { $group: { 
+      _id: "$eventId", 
+      uniqueAttendees: { $addToSet: "$userId" }, 
+      totalAttendeesCount: { $sum: "$quantity" } 
+  }},
+  { $project: { 
+      eventId: "$_id", 
+      totalAttendeesCount: 1, 
+      uniqueUsersBooked: { $size: "$uniqueAttendees" } 
+  }}
+])
+4. Events Grouped by Category and Status
+db.Events.aggregate([
+  { $group: { 
+      _id: { category: "$category", status: "$status" }, 
+      eventCount: { $sum: 1 },
+      titles: { $push: "$title" }
+  }},
+  { $sort: { "_id.category": 1 } }
+])
+/////////////////////INDEXES
+db.Events.createIndex({ "dateTime": 1 });
+db.Events.createIndex({ "category": 1, "price": 1 });
+db.Users.createIndex({ "email": 1 }, { unique: true });
+db.Events.find({ "category": "Sports" }).explain("executionStats");
+{
+  explainVersion: '1',
+  queryPlanner: {
+    namespace: 'management.Events',
+    parsedQuery: {
+      category: {
+        '$eq': 'Sports'
+      }
+    },
+    indexFilterSet: false,
+    queryHash: '421A7F3B',
+    planCacheShapeHash: '421A7F3B',
+    planCacheKey: '40E5AF85',
+    optimizationTimeMillis: 1,
+    maxIndexedOrSolutionsReached: false,
+    maxIndexedAndSolutionsReached: false,
+    maxScansToExplodeReached: false,
+    prunedSimilarIndexes: false,
+    winningPlan: {
+      isCached: false,
+      stage: 'FETCH',
+      inputStage: {
+        stage: 'IXSCAN',
+        keyPattern: {
+          category: 1
+        },
+        indexName: 'category_1',
+        isMultiKey: false,
+        multiKeyPaths: {
+          category: []
+        },
+        isUnique: false,
+        isSparse: false,
+        isPartial: false,
+        indexVersion: 2,
+        direction: 'forward',
+        indexBounds: {
+          category: [
+            '["Sports", "Sports"]'
+          ]
+        }
+      }
+    },
+    rejectedPlans: [
+      {
+        isCached: false,
+        stage: 'FETCH',
+        inputStage: {
+          stage: 'IXSCAN',
+          keyPattern: {
+            category: 1,
+            price: 1
+          },
+          indexName: 'category_1_price_1',
+          isMultiKey: false,
+          multiKeyPaths: {
+            category: [],
+            price: []
+          },
+          isUnique: false,
+          isSparse: false,
+          isPartial: false,
+          indexVersion: 2,
+          direction: 'forward',
+          indexBounds: {
+            category: [
+              '["Sports", "Sports"]'
+            ],
+            price: [
+              '[MinKey, MaxKey]'
+            ]
+          }
+        }
+      }
+    ]
+  },
+  executionStats: {
+    executionSuccess: true,
+    nReturned: 3,
+    executionTimeMillis: 1,
+    totalKeysExamined: 3,
+    totalDocsExamined: 3,
+    executionStages: {
+      isCached: false,
+      stage: 'FETCH',
+      nReturned: 3,
+      executionTimeMillisEstimate: 1,
+      works: 5,
+      advanced: 3,
+      needTime: 0,
+      needYield: 0,
+      saveState: 0,
+      restoreState: 0,
+      isEOF: 1,
+      docsExamined: 3,
+      alreadyHasObj: 0,
+      inputStage: {
+        stage: 'IXSCAN',
+        nReturned: 3,
+        executionTimeMillisEstimate: 1,
+        works: 4,
+        advanced: 3,
+        needTime: 0,
+        needYield: 0,
+        saveState: 0,
+        restoreState: 0,
+        isEOF: 1,
+        keyPattern: {
+          category: 1
+        },
+        indexName: 'category_1',
+        isMultiKey: false,
+        multiKeyPaths: {
+          category: []
+        },
+        isUnique: false,
+        isSparse: false,
+        isPartial: false,
+        indexVersion: 2,
+        direction: 'forward',
+        indexBounds: {
+          category: [
+            '["Sports", "Sports"]'
+          ]
+        },
+        keysExamined: 3,
+        seeks: 1,
+        dupsTested: 0,
+        dupsDropped: 0
+      }
+    }
+  },
+  queryShapeHash: '825A19ED05FF369AB644A25E72D66FBDF24DB952BF966739940F5A496559F48F',
+  command: {
+    find: 'Events',
+    filter: {
+      category: 'Sports'
+    },
+    '$db': 'management'
+  },
+  serverInfo: {
+    host: 'ac-q8e96uh-shard-00-02.ml6h0pg.mongodb.net',
+    port: 27017,
+    version: '8.0.17',
+    gitVersion: 'b20e43625b72f4bb43cc15107f80ac966ae13b6d'
+  },
+  serverParameters: {
+    internalQueryFacetBufferSizeBytes: 104857600,
+    internalQueryFacetMaxOutputDocSizeBytes: 104857600,
+    internalLookupStageIntermediateDocumentMaxSizeBytes: 16793600,
+    internalDocumentSourceGroupMaxMemoryBytes: 104857600,
+    internalQueryMaxBlockingSortMemoryUsageBytes: 33554432,
+    internalQueryProhibitBlockingMergeOnMongoS: 0,
+    internalQueryMaxAddToSetBytes: 104857600,
+    internalDocumentSourceSetWindowFieldsMaxMemoryBytes: 104857600,
+    internalQueryFrameworkControl: 'trySbeRestricted',
+    internalQueryPlannerIgnoreIndexWithCollationForRegex: 1
+  },
+  ok: 1,
+  '$clusterTime': {
+    clusterTime: Timestamp({ t: 1768831522, i: 1 }),
+    signature: {
+      hash: Binary.createFromBase64('YbhmgsclstEa/vrtjhtmRdN2Ttg=', 0),
+      keyId: 7537737578087186000
+    }
+  },
+  operationTime: Timestamp({ t: 1768831522, i: 1 })
+}
+
+
